@@ -1,38 +1,302 @@
-.App {
-  text-align: center;
+::-webkit-scrollbar {
+  width: 4px;
+  background: rgb(243, 56, 4);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(243, 56, 4);
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-size: 24px;
+}
+
+*  *::after *::before{
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  font-size: 50px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Убираем маркеры */
+}
+@media screen and (min-width: 1300px) {
+
+  .dropbtn{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  /* главная страница */
+  .heroSection{
+    width: 100%;
+    background-image: url('./res/or.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding-bottom: 5%;
   }
+
+  header{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 90px;
+    display: flex;
+  }
+
+
+  .logo{
+    width: 116px;
+    height: 29px;
+    top: 93px;
+
+    font-family: Libre Franklin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  header .logo {
+    width: 50%;
+  }
+
+  header .nav {
+    padding-top: 1%;
+    width: 50%;
+  }
+
+  header .nav ul {
+    display: flex;
+    font-size: 18px;
+  }
+
+  header .nav li	 {
+    text-align: right;
+    padding-left: 13%;
+  }
+  header .nav li a:hover	 {
+    font-weight:bold;
+  }
+
+  .content{
+    color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 93px;
+  }
+
+  .texts{
+    padding-top: 145px;
+    color: white;
+    margin-top: -12%;
+  }
+
+  .texts h1{
+    font-size: 64px;
+    line-height: 78px;
+    padding-bottom: 26px;
+  }
+
+  .texts p{
+    padding-bottom: 106px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .texts a{
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+  }
+
+  .texts a:hover{
+    text-decoration: underline;
+  }
+  .about{
+    height: 544px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: solid 10px rgb(243, 56, 4);
+  }
+
+  .content h2{
+    font-size: 24px;
+    color: white;
+    padding-bottom: 76px;
+  }
+
+  .about p{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .skills{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 693px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .flex{
+    display: flex;
+  }
+  .ava {
+    border-radius: 50%;
+    border: solid 2px rgb(243, 56, 4)
+  }
+  .skillsImage{
+    background-image: url('./res/Profile Picture.png');
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 60%;
+  }
+
+  .value{
+    margin-left: 125px;
+    width: 13%;
+    margin-right: 130px;
+  }
+  progress {
+    border:0;
+    width: 400px;
+    height: 20px;
+    background: rgb(255, 254, 254);
+  }
+}
+progress::-webkit-progress-value {
+  background: rgb(243, 56, 4);
+}
+
+.skillsRightContent td{
+  padding-bottom: 25px;
+}
+
+.skillsRightContent td{
+  padding-left: 50px;
+}
+.rightContent a {
+  padding: 5%;
+}
+.rightContent img {
+  border: solid 2px rgb(243, 56, 4);
+}
+.rightContent img:hover {
+  border: solid 2px white;
+  transition: border 200ms;
+}
+.portfolio{
+  background-color: black;
+  width: 100%;
+  height: 822px;
+  color: white;
+}
+
+.portfolio .leftContent{
+  text-align: left;
+  padding-top: 48px;
+  width: 60%;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.leftContent ul{
+  padding-top: 235px;
+  display: flex;
+}
+
+.leftContent li{
+  margin-left: 15px;
+}
+
+footer {
+  width: 100%;
+  height: 822px;
+  background: #000000;
+  color: white;
+}
+
+footer a{
+  color: white;
+}
+
+footer table{
+  border-spacing: 70px 0;
+}
+
+footer td:nth-child(2){
+  padding-bottom: 14px;
+  width: 85%;
+}
+
+footer .up{
+  margin-left: 90%;
+  margin-top: 100px;
+}
+
+#contact table{
+  text-align: center;
+}
+.LeftTop {
+  border-radius: 70% 0% 0% 0%;
+}
+.RightTop {
+  border-radius: 0% 50% 0% 0%;
+}
+.LeftDown {
+  border-radius: 0% 0% 0% 50%;
+}
+.RightDown {
+  border-radius: 0% 0% 70% 0%;
 }
